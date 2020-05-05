@@ -43,4 +43,9 @@ app.use((req, res, next) => {
   res.sendFile(path.join(__dirname, "deploy", "index.html"))
 })
 
+const port = process.env.PORT || 3000
+app.listen(port, ()=> {
+  console.log("server listening to port", port)
+})
+
 module.exports = app;
